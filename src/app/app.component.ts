@@ -72,7 +72,7 @@ import { HeroService } from './hero.service';
 
 export class AppComponent implements OnInit {
   title = 'Tour of Heroes';
-  // heroes = HEROES;
+  
   heroes: Hero[];
   selectedHero: Hero;
 
@@ -83,7 +83,8 @@ export class AppComponent implements OnInit {
   } 
 
   getHeroes(): void {
-    this.heroService.getHeros().then(heroes => this.heroes = heroes);
+    this.heroService.getHeroes().then(heroes => this.heroes = heroes);
+    //this.heroService.getHeroesSlowly().then(heroes => this.heroes = heroes);
   }
 
   onSelect(hero: Hero): void {
